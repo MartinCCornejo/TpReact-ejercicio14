@@ -1,12 +1,13 @@
 import { Container } from "react-bootstrap";
+import Banner from "../Banner";
+import Recetas from "../Recetas";
 
 const Inicio = () => {
     return (
-        <Container className="flex-grow-1">
-            <section className="">
-
-            </section>
-        </Container>
+        <>
+        <Banner></Banner>
+        <Recetas></Recetas>
+        </>
     );
 };
 
