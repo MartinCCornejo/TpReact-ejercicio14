@@ -3,3 +3,21 @@
   display: flex;
   flex-direction: column;
 }
+
+h1,h2,h3,h4,h5,h6, button, .textPoppins{
+  font-family: 'Poppins',sans-serif;
+}
+
+p, .textRoboto{
+  font-family: 'Roboto',sans-serif;
+}
+
+.bg-mainColor{
+  background: #B8860B ;
+}
+
+.logo{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  color: #fff;
+}
