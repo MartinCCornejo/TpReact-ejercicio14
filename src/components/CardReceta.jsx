@@ -2,7 +2,7 @@ import { Col, Card } from "react-bootstrap";
 
 const CardReceta = () => {
   return (
-    <Col lg={3} md={4} sm={6} className="mb-4">
+    <Col lg={4} md={6} sm={6} className="mb-4">
       <Card className="h-100">
         <div className="card-img-container">
           <Card.Img
