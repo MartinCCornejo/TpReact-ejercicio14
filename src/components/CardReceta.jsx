@@ -1,4 +1,4 @@
-import { Col, Card, Button } from "react-bootstrap";
+import { Col, Card } from "react-bootstrap";
 
 const CardReceta = () => {
   return (
@@ -7,21 +7,17 @@ const CardReceta = () => {
         <div className="card-img-container">
           <Card.Img
             variant="top"
-            src=""
+            src="https://images.pexels.com/photos/1351238/pexels-photo-1351238.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             className="img-card-customized"
           />
         </div>
         <Card.Body className="pb-0 d-flex flex-column justify-content-between">
-          <h3 className="main-color fs-5 fw-semibold">
-            Producto
-          </h3>
-          <p>Descripcion breve</p>
+          <h3 className="fs-5 fw-semibold">Pan con espinaca y queso</h3>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit..</p>
           <h3 className="fw-bold fs-3"></h3>
         </Card.Body>
-        <Card.Footer className="d-flex justify-content-between align-items-center">
-          <Button variant="dark" className="text-montserrat fw-semibold">
-            Ver más
-          </Button>
+        <Card.Footer className="text-center">
+          <button className="btn-customized">Ver más</button>
         </Card.Footer>
       </Card>
     </Col>
