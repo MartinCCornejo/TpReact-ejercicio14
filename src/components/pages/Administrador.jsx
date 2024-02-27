@@ -29,10 +29,6 @@ const Administrador = () => {
         </thead>
         <tbody>
           <ItemReceta></ItemReceta>
-          <ItemReceta></ItemReceta>
-          <ItemReceta></ItemReceta>
-          <ItemReceta></ItemReceta>
-          <ItemReceta></ItemReceta>
         </tbody>
       </Table>
     </Container>
