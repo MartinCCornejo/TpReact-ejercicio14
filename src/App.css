@@ -4,6 +4,10 @@
   flex-direction: column;
 }
 
+.bg-main-color{
+  background: #FDF5E6;
+}
+
 h1,h2,h3,h4,h5,h6, button, .textPoppins{
   font-family: 'Poppins',sans-serif;
 }
@@ -12,8 +16,12 @@ p, .textRoboto{
   font-family: 'Roboto',sans-serif;
 }
 
-.bg-mainColor{
-  background: #B8860B ;
+.bg-darkGolden{
+  background:#B8860B;
+}
+
+.darkGolden-color{
+  color: #B8860B;
 }
 
 .logo{
