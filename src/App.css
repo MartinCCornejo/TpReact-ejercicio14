@@ -44,6 +44,10 @@ p, .textRoboto{
   text-shadow: 5px 5px 10px rgba(0,0,0,0.3);
 }
 
+.text-gray{
+  color: #444;
+}
+
 .img-card-customized{
   height: 220px;
   object-fit: cover;
@@ -69,11 +73,11 @@ p, .textRoboto{
   color: #fff;
   font-weight: 600;
   padding: 7px 15px;
-  border-radius: 5px;
-  transition: letter-spacing .3s, box-shadow .3s, text-shadow .3s;
+  border-radius: 3px;
+  transition: filter .3s, text-shadow .3s;
 }
 .btn-customized:hover{
-  letter-spacing: 3px;
-  box-shadow: 3px 3px 10px rgba(20,20,20,0.2);
-  text-shadow: 3px 3px 10px rgba(0,0,0,0.3);
+  text-shadow: 3px 3px 15px rgba(0,0,0,0.2);
+  filter: brightness(1.1);
 }
+
