@@ -81,3 +81,19 @@ p, .textRoboto{
   filter: brightness(1.1);
 }
 
+.image-title-container{
+  background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.7))
+  ,url(./assets/img-title.jpg) no-repeat center center;
+  background-size: cover;
+  height: 40vh;
+  max-height: 25rem;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  padding-bottom: 40px;
+}
+
+.title{
+  color: #fff;
+  font-weight: 700;
+}
