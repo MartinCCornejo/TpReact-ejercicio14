@@ -15,7 +15,7 @@ function App() {
       <Routes>
         <Route exact path="/" element={<Inicio></Inicio>}></Route>
         <Route exact path="/administrador" element={<Administrador></Administrador>}></Route>
-        <Route exact path="/administrador/agregar-producto" element={<FormularioReceta></FormularioReceta>}></Route>
+        <Route exact path="/administrador/agregar-receta" element={<FormularioReceta></FormularioReceta>}></Route>
       </Routes>
       <Footer></Footer>
     </BrowserRouter>
