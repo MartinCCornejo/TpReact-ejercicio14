@@ -1,5 +1,6 @@
 import { Container, Table, Button } from "react-bootstrap";
 import ItemReceta from "../ItemReceta";
+import { Link } from "react-router-dom";
 
 const Administrador = () => {
   return (
@@ -11,9 +12,12 @@ const Administrador = () => {
           roductos disponibles
         </h1>
         <div>
+          <Link to='/administrador/agregar-receta'>
           <Button variant="primary">
             <i className="bi bi-file-earmark-plus"></i>
           </Button>
+          </Link>
+          
         </div>
       </div>
       <Table striped bordered hover responsive>
