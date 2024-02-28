@@ -6,6 +6,7 @@ import Inicio from "./components/pages/Inicio";
 import Footer from "./components/common/Footer";
 import Administrador from "./components/pages/Administrador";
 import FormularioReceta from "./components/pages/FormularioReceta";
+import DetalleReceta from "./components/pages/DetalleReceta";
 import { Route, Routes, BrowserRouter } from "react-router-dom";
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Route exact path="/" element={<Inicio></Inicio>}></Route>
         <Route exact path="/administrador" element={<Administrador></Administrador>}></Route>
         <Route exact path="/administrador/agregar-receta" element={<FormularioReceta></FormularioReceta>}></Route>
+        <Route exact path="/detalle-de-receta" element={<DetalleReceta></DetalleReceta>}></Route>
       </Routes>
       <Footer></Footer>
     </BrowserRouter>
