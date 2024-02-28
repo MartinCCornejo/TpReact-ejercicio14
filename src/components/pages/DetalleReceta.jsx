@@ -9,6 +9,7 @@ const DetalleReceta = () => {
           <span className="display-4 fw-semibold darkGolden-color">D</span>
           etalle de la receta
         </h1>
+        <hr className="mt-0"/>
         <Row className="justify-content-center align-items-center mt-4">
           <Col md={6} className="mb-4 mb-md-0">
             <img
@@ -17,7 +18,7 @@ const DetalleReceta = () => {
               className="img-detalle"
             />
           </Col>
-          <Col md={6}>
+          <Col md={6} className="text-center text-md-start">
             <h2 className="fw-semibold text-uppercase fs-1">
               Pan con espinaca y queso
             </h2>
@@ -29,7 +30,7 @@ const DetalleReceta = () => {
               Merienda
             </span>
             <hr className="mt-2 mb-3" />
-            <p className="text-gray">
+            <p className="text-gray text-start">
               El café americano es una bebida caliente que consiste en un
               espresso diluido con agua caliente, lo que resulta en una taza de
               café suave y aromático. Es una opción popular para aquellos que
@@ -43,7 +44,7 @@ const DetalleReceta = () => {
             <span className="display-4 fw-semibold darkGolden-color">I</span>
             ngredientes
           </h3>
-          <hr />
+          <hr className="mt-0"/>
           <p className="text-gray">
             300g de espinacas frescas, lavadas y picadas 200g de queso (puede
             ser queso rallado, como cheddar, mozzarella, o cualquier otro queso
@@ -58,7 +59,7 @@ const DetalleReceta = () => {
             <span className="display-4 fw-semibold darkGolden-color">P</span>
             reparación
           </h3>
-          <hr />
+          <hr className="mt-0"/>
           <p className="text-gray">
             En un bol grande, disuelve la levadura en el agua tibia. Deja
             reposar durante unos minutos hasta que empiece a burbujear. Agrega

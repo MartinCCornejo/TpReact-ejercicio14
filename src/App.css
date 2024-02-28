@@ -96,6 +96,10 @@ p, .textRoboto{
   filter: brightness(1.1);
 }
 
+.btn-100{
+  width: 100%;
+}
+
 .image-title-container{
   background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.7))
   ,url(./assets/img-title.jpg) no-repeat center center;
