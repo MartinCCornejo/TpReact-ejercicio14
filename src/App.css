@@ -30,6 +30,21 @@ p, .textRoboto{
   color: #fff;
 }
 
+.navbar .nav-link{
+  color: #eee ;
+  transition: color .3s; 
+}
+
+.navbar .nav-link:hover{
+  color: #fff;
+}
+
+.navbar .nav-link.active{
+  font-weight: 700;
+  color: #fff;
+}
+
+
 .banner{
   background: linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)) 
   ,url(./assets/img-banner.jpg) no-repeat center center;
@@ -104,3 +119,4 @@ p, .textRoboto{
   object-fit: cover;
   border-radius: 5px;
 }
+
