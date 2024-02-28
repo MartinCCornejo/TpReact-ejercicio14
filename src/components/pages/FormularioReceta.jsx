@@ -41,30 +41,32 @@ const FormularioReceta = () => {
               placeholder="Ingrese una descripción ampliada de la receta"
             />
           </Form.Group>
-          <Form.Group className="mb-3" controlId="formCategoria">
-            <Form.Label>Categoría</Form.Label>
-            <Form.Select aria-label="categoria">
-              <option>Seleccione la categoría</option>
-              <option value="platoPrincipal">Plato principal</option>
-              <option value="postresYDulces">Postres y dulces</option>
-              <option value="vegetarianasOVeganas">
-                Vegetarianas o veganas
-              </option>
-              <option value="guarniciones">Guarniciones</option>
-              <option value="panaderiaYReposteria">
-                Panadería y repostería
-              </option>
-              <option value="internacionales">Internacionales</option>
-            </Form.Select>
-          </Form.Group>
-          <Form.Group className="mb-3" controlId="formDificultad">
-            <Form.Label>Dificultad</Form.Label>
-            <Form.Select aria-label="dificultad">
-              <option>Seleccione la dificultad</option>
-              <option value="facil">Fácil</option>
-              <option value="intermedio">Intermedio</option>
-              <option value="dificil">Difícil</option>
-            </Form.Select>
+          <Form.Group className="mb-3 row" controlId="formDificultadYCategoria">
+            <div className="col-md-6">
+              <Form.Label>Categoría</Form.Label>
+              <Form.Select aria-label="categoria">
+                <option>Seleccione la categoría</option>
+                <option value="platoPrincipal">Plato principal</option>
+                <option value="postresYDulces">Postres y dulces</option>
+                <option value="vegetarianasOVeganas">
+                  Vegetarianas o veganas
+                </option>
+                <option value="guarniciones">Guarniciones</option>
+                <option value="panaderiaYReposteria">
+                  Panadería y repostería
+                </option>
+                <option value="internacionales">Internacionales</option>
+              </Form.Select>
+            </div>
+            <div className="col-md-6">
+              <Form.Label>Dificultad</Form.Label>
+              <Form.Select aria-label="dificultad">
+                <option>Seleccione la dificultad</option>
+                <option value="facil">Fácil</option>
+                <option value="intermedio">Intermedio</option>
+                <option value="dificil">Difícil</option>
+              </Form.Select>
+            </div>
           </Form.Group>
           <Form.Group className="mb-3" controlId="formIngredientes">
             <Form.Label>Ingredientes</Form.Label>
@@ -80,7 +82,9 @@ const FormularioReceta = () => {
               placeholder="Ingrese la preparación de la receta"
             />
           </Form.Group>
-          <button className="btn-customized mt-2 fs-5" type="submit">Guardar</button>
+          <button className="btn-customized mt-2 fs-5" type="submit">
+            Guardar
+          </button>
         </Form>
       </Container>
     </section>
