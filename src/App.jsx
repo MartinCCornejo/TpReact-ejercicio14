@@ -7,6 +7,7 @@ import Footer from "./components/common/Footer";
 import Administrador from "./components/pages/Administrador";
 import FormularioReceta from "./components/pages/FormularioReceta";
 import DetalleReceta from "./components/pages/DetalleReceta";
+import Error404 from "./components/pages/Error404";
 import { Route, Routes, BrowserRouter } from "react-router-dom";
 
 function App() {
@@ -17,7 +18,8 @@ function App() {
         <Route exact path="/" element={<Inicio></Inicio>}></Route>
         <Route exact path="/administrador" element={<Administrador></Administrador>}></Route>
         <Route exact path="/administrador/agregar-receta" element={<FormularioReceta></FormularioReceta>}></Route>
-        <Route exact path="/detalle-de-receta" element={<DetalleReceta></DetalleReceta>}></Route>
+        <Route exact path="/detalle-de-receta" element={<DetalleReceta></DetalleReceta>}></Route> 
+        <Route path="*" element={<Error404></Error404>}></Route> 
       </Routes>
       <Footer></Footer>
     </BrowserRouter>
