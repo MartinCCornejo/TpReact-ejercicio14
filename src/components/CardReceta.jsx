@@ -1,5 +1,6 @@
 import { Col, Card } from "react-bootstrap";
 import { FaUtensils } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 const CardReceta = () => {
   return (
@@ -23,9 +24,13 @@ const CardReceta = () => {
               </span>
             </div>
           </Card.Header>
-          <p className="text-gray">Lorem ipsum dolor, sit amet consectetur adipisicing elit..</p>
+          <p className="text-gray">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit..
+          </p>
         </Card.Body>
-          <button className="btn-customized">Ver más</button>
+        <Link to={"/detalle-de-receta"}>
+          <button className="btn-customized btn-100">Ver más</button>
+        </Link>
       </Card>
     </Col>
   );
