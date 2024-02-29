@@ -1,32 +1,84 @@
 import { Container, Form } from "react-bootstrap";
 import { useForm } from "react-hook-form";
-import { crearRecetaAPI } from "../../helpers/queries";
+import { crearRecetaAPI, modificarRecetaAPI, obtenerRecetaAPI } from "../../helpers/queries";
 import Swal from "sweetalert2";
+import { useNavigate, useParams } from "react-router";
+import { useEffect } from "react";
 
-const FormularioReceta = () => {
+const FormularioReceta = ({titulo, subtitulo, editar}) => {
   const {
     register,
     handleSubmit,
     formState: { errors },
-    reset
+    reset,
+    setValue
   } = useForm();
 
-  const onSubmit = async (receta) => {
-    const respuesta = await crearRecetaAPI(receta);
+  const {id} = useParams();
+  const navegacion = useNavigate();
 
-    if (respuesta.status === 201) {
-      Swal.fire({
-        title: "Receta agregada!",
-        text: `La receta '${receta.nombreReceta}' se agrego correctamente.`,
-        icon: "success"
-      });
-      reset();
+  useEffect(()=> {
+    if (editar) {
+      cargarDatosReceta();
+    }
+  },[])
+
+  async function cargarDatosReceta () {
+    const respuesta = await obtenerRecetaAPI(id);
+
+    if (respuesta.status === 200) {
+      const recetaBuscada = await respuesta.json();
+      setValue('nombreReceta',recetaBuscada.nombreReceta);
+      setValue('imagenURL',recetaBuscada.imagenURL);
+      setValue('descripcionBreve',recetaBuscada.descripcionBreve);
+      setValue('descripcionDetallada',recetaBuscada.descripcionDetallada);
+      setValue('categoria',recetaBuscada.categoria);
+      setValue('dificultad',recetaBuscada.dificultad);
+      setValue('ingredientes',recetaBuscada.ingredientes);
+      setValue('preparacion',recetaBuscada.preparacion);
+    }
+  }
+  
+
+  const onSubmit = async (receta) => {
+    if (editar) {
+      // Aqui se edita una receta 
+      const respuesta = await modificarRecetaAPI(receta,id);
+      console.log(respuesta)
+
+      if (respuesta.status === 200) {
+        Swal.fire({
+          title: "Receta modificada!",
+          text: `La receta '${receta.nombreReceta}' se modifico correctamente.`,
+          icon: "success"
+        });
+        navegacion('/administrador');
+
+      } else {
+        Swal.fire({
+          title: "Ocurrio un error!",
+          text: `La receta '${receta.nombreReceta}' no se pudo modificar correctamente, intente de nuevo en unos minutos.`,
+          icon: "error"
+        });
+      }
+
     } else {
-      Swal.fire({
-        title: "Ocurrio un error!",
-        text: `La receta '${receta.nombreReceta}' no se pudo agregar, intente de nuevo en unos minutos.`,
-        icon: "error"
-      });
+      const respuesta = await crearRecetaAPI(receta);
+
+      if (respuesta.status === 201) {
+        Swal.fire({
+          title: "Receta agregada!",
+          text: `La receta '${receta.nombreReceta}' se agrego correctamente.`,
+          icon: "success"
+        });
+        reset();
+      } else {
+        Swal.fire({
+          title: "Ocurrio un error!",
+          text: `La receta '${receta.nombreReceta}' no se pudo agregar, intente de nuevo en unos minutos.`,
+          icon: "error"
+        });
+      }
     }
   };
 
@@ -34,12 +86,11 @@ const FormularioReceta = () => {
   return (
     <section className="flex-grow-1 bg-main-color">
       <div className="image-title-container">
-        <h1 className="title display-4">Agregar Receta</h1>
+        <h1 className="title display-3">{titulo}</h1>
       </div>
       <Container className="my-4">
         <h2 className="fs-1">
-          <span className="display-4 fw-semibold darkGolden-color">N</span>ueva
-          receta
+          {subtitulo}
         </h2>
         <hr />
         <Form className="mb-5" onSubmit={handleSubmit(onSubmit)}>
@@ -134,15 +185,12 @@ const FormularioReceta = () => {
               >
                 <option value="">Seleccione la categoría</option>
                 <option value="Plato principal">Plato principal</option>
-                <option value="Postres y dulces">Postres y dulces</option>
-                <option value="Vegetarianas o veganas">
-                  Vegetarianas o veganas
-                </option>
-                <option value="guarniciones">Guarniciones</option>
-                <option value="Panaderia y reposteria">
-                  Panadería y repostería
-                </option>
-                <option value="Internacionales">Internacionales</option>
+                <option value="Postres">Postres</option>
+                <option value="Sopas y guisos">Sopas y guisos</option>
+                <option value="Ensaladas">Ensaladas</option>
+                <option value="Pastas">Pastas</option>
+                <option value="Aperitivos">Aperitivos</option>
+                <option value="Pan y bolleria">Pan y bolleria</option>
               </Form.Select>
               <Form.Text className="text-danger">
                 {errors.categoria?.message}
@@ -157,9 +205,9 @@ const FormularioReceta = () => {
                 })}
               >
                 <option value="">Seleccione la dificultad</option>
-                <option value="Dificultad fácil">Fácil</option>
-                <option value="Dificultad intermedio">Intermedio</option>
-                <option value="Dificultad difícil">Difícil</option>
+                <option value="Fácil">Fácil</option>
+                <option value="Intermedio">Intermedio</option>
+                <option value="Difícil">Difícil</option>
               </Form.Select>
               <Form.Text className="text-danger">
                 {errors.dificultad?.message}

@@ -17,14 +17,14 @@ const CardReceta = ({receta}) => {
           <Card.Header className="py-2 px-2 mb-2">
             <h3 className="fs-4 fw-semibold">{receta.nombreReceta}</h3>
             <div className="d-flex darkGolden-color justify-content-around">
-              <span className="textPoppins fw-bold">{receta.dificultad}</span>
+              <span className="textPoppins fw-bold">Dif. {receta.dificultad}</span>
               <span className="textPoppins fw-bold">
                 <FaUtensils className="me-1" />
                 {receta.categoria}
               </span>
             </div>
           </Card.Header>
-          <p className="text-gray">
+          <p className="text-gray px-2">
             {receta.descripcionBreve}
           </p>
         </Card.Body>

@@ -1,6 +1,7 @@
 import { Button } from "react-bootstrap";
 import { borrarRecetaAPI, leerRecetasAPI } from "../helpers/queries";
 import Swal from "sweetalert2";
+import { Link } from "react-router-dom";
 
 const ItemReceta = ({ receta, setRecetas }) => {
   const borrarReceta = () => {
@@ -58,9 +59,9 @@ const ItemReceta = ({ receta, setRecetas }) => {
         {receta.dificultad}
       </td>
       <td className="text-center overflow-hidden text-truncate">
-        <Button className="btn btn-warning">
+        <Link className="btn btn-warning" to={"/administrador/editar-receta/"+receta.id}>
           <i className="bi bi-pencil-square"></i>
-        </Button>
+        </Link>
         <Button variant="danger" className="ms-2" onClick={borrarReceta}>
           <i className="bi bi-trash"></i>
         </Button>
