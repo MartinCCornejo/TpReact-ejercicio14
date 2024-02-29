@@ -3,6 +3,7 @@ import ItemReceta from "../ItemReceta";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { leerRecetasAPI } from "../../helpers/queries";
+import Swal from "sweetalert2";
 
 const Administrador = () => {
 
@@ -17,7 +18,14 @@ const Administrador = () => {
   
     if (respuesta.status === 200) {
       const datos = await respuesta.json();
-      setRecetas(datos)
+      setRecetas(datos);
+
+    } else {
+      Swal.fire({
+        title: "Ocurrio un error!",
+        text: `Intente de nuevo en unos minutos.`,
+        icon: "error"
+      });
     }
   }
 
