@@ -1,8 +1,26 @@
 import { Container, Table, Button } from "react-bootstrap";
 import ItemReceta from "../ItemReceta";
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { leerRecetasAPI } from "../../helpers/queries";
 
 const Administrador = () => {
+
+  const [recetas,setRecetas] = useState([]);
+
+  useEffect(()=>{
+    obtenerRecetas();
+  },[])
+  
+  async function obtenerRecetas () {
+    const respuesta = await leerRecetasAPI();
+  
+    if (respuesta.status === 200) {
+      const datos = await respuesta.json();
+      setRecetas(datos)
+    }
+  }
+
   return (
     <section className="bg-main-color flex-grow-1">
     <Container className="my-5 ">
