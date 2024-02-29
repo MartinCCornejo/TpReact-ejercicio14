@@ -1,6 +1,6 @@
 import { Container, Form } from "react-bootstrap";
 import { useForm } from "react-hook-form";
-import { crearRecetaAPI, obtenerRecetaAPI } from "../../helpers/queries";
+import { crearRecetaAPI, modificarRecetaAPI, obtenerRecetaAPI } from "../../helpers/queries";
 import Swal from "sweetalert2";
 import { useParams } from "react-router";
 import { useEffect } from "react";
@@ -41,10 +41,18 @@ const FormularioReceta = ({titulo, subtitulo, editar}) => {
 
   const onSubmit = async (receta) => {
     if (editar) {
-      
+      // Aqui se edita una receta 
+      const respuesta = await modificarRecetaAPI(producto,producto.id);
+
+      if (respuesta.status === 200) {
+        
+      } else {
+        
+      }
+
     } else {
       const respuesta = await crearRecetaAPI(receta);
-  
+
       if (respuesta.status === 201) {
         Swal.fire({
           title: "Receta agregada!",
