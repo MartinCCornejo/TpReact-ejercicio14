@@ -1,8 +1,31 @@
-# React + Vite
+# Blog de Recetas de Cocina
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto es una aplicación web desarrollada con React que permite a los usuarios explorar un blog de recetas de cocina. La aplicación cuenta con las siguientes funcionalidades:
 
-Currently, two official plugins are available:
+* Visualización de recetas de cocina en una página principal.
+* Capacidad para agregar nuevas recetas.
+* Opción para modificar o eliminar recetas existentes.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Las recetas pueden ser almacenadas en un servidor JSON mediante `json-server`.
+
+## Instalación
+1. Clona este repositorio en tu máquina local usando el siguiente comando:
+    ```bash
+   git clone https://github.com/MartinCCornejo/TpReact-ejercicio14.git
+2. Navega al directorio del proyecto:
+   ```bash
+    cd 14-BlogDeRecetas
+3. Instala las dependencias necesarias: 
+   ```bash
+    npm install
+## Uso
+
+Asegúrate de tener json-server instalado globalmente. Si no lo tienes, puedes instalarlo ejecutando:
+1. ```bash
+    npm install json-server
+3. Luego escribe el siguiente comando para inciar `json-server`: 
+   ```bash
+    npx json-server db.json
+4. Ejecuta la aplicación en modo desarrollo: 
+   ```bash
+    npm run dev

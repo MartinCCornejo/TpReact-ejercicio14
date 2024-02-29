@@ -116,6 +116,7 @@ p, .textRoboto{
   padding: 7px 15px;
   border-radius: 3px;
   transition: filter .3s, text-shadow .3s;
+  text-decoration: none;
 }
 .btn-customized:hover{
   text-shadow: 3px 3px 15px rgba(0,0,0,0.2);
