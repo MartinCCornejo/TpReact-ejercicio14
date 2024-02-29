@@ -1,6 +1,153 @@
-p{
-  font-family: 'Roboto';
+#root{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
-h1{
-  font-family: 'Poppins';
+
+.bg-main-color{
+  background: #FDF5E6;
 }
+
+h1,h2,h3,h4,h5,h6, button, .textPoppins{
+  font-family: 'Poppins',sans-serif;
+}
+
+p, .textRoboto{
+  font-family: 'Roboto',sans-serif;
+}
+
+.bg-darkGolden{
+  background:#B8860B;
+}
+
+.darkGolden-color{
+  color: #B8860B;
+}
+
+.navbar-toggler{
+  background: #fff;
+}
+
+.logo{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  color: #fff;
+  transition: text-shadow .3s;
+}
+.logo:hover{
+  color: #fff;
+  text-shadow: 3px 3px 15px rgba(0,0,0,0.3);
+}
+
+.logo:focus{
+  color: #fff
+}
+
+.navbar-customized{
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  padding: 20px 0;
+  transition: padding .3s, box-shadow .3s;
+  background: #B8860B;
+}
+.navbar-customized.activeNavbar{
+  padding: 14px 0;
+  box-shadow: 3px 3px 20px rgba(0,0,0,0.4);
+}
+
+.navbar .nav-link{
+  color: #eee ;
+  transition: color .3s; 
+}
+
+.navbar .nav-link:hover{
+  color: #fff;
+}
+
+.navbar .nav-link.active{
+  font-weight: 700;
+  color: #fff;
+}
+
+
+.banner{
+  background: linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.7)) 
+  ,url(./assets/img-banner.jpg) no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+  max-height: 60rem;
+  display: flex;
+  align-items: center;
+}
+
+.text-banner{
+  color: #eee;
+  text-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+}
+
+.text-gray{
+  color: #444;
+}
+
+.img-card-customized{
+  height: 220px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.card-img-container{
+  overflow: hidden;
+}
+
+.card-img-container img{
+  transition: transform .8s;
+}
+
+.card-img-container img:hover{
+  transform: scale(1.3);
+}
+
+.btn-customized{
+  border: none;
+  background: #B8860B;
+  color: #fff;
+  font-weight: 600;
+  padding: 7px 15px;
+  border-radius: 3px;
+  transition: filter .3s, text-shadow .3s;
+  text-decoration: none;
+}
+.btn-customized:hover{
+  text-shadow: 3px 3px 15px rgba(0,0,0,0.2);
+  filter: brightness(1.1);
+}
+
+.btn-100{
+  width: 100%;
+}
+
+.image-title-container{
+  background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.7))
+  ,url(./assets/img-title.jpg) no-repeat center center;
+  background-size: cover;
+  height: 50vh;
+  max-height: 27rem;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  padding-bottom: 40px;
+}
+
+.title{
+  color: #fff;
+  font-weight: 700;
+}
+
+.img-detalle{
+  height: 400px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
