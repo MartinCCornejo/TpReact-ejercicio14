@@ -2,7 +2,7 @@ import { Container, Form } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { crearRecetaAPI, modificarRecetaAPI, obtenerRecetaAPI } from "../../helpers/queries";
 import Swal from "sweetalert2";
-import { useParams } from "react-router";
+import { useNavigate, useParams } from "react-router";
 import { useEffect } from "react";
 
 const FormularioReceta = ({titulo, subtitulo, editar}) => {
@@ -15,6 +15,7 @@ const FormularioReceta = ({titulo, subtitulo, editar}) => {
   } = useForm();
 
   const {id} = useParams();
+  const navegacion = useNavigate();
 
   useEffect(()=> {
     if (editar) {
@@ -42,7 +43,8 @@ const FormularioReceta = ({titulo, subtitulo, editar}) => {
   const onSubmit = async (receta) => {
     if (editar) {
       // Aqui se edita una receta 
-      const respuesta = await modificarRecetaAPI(producto,producto.id);
+      const respuesta = await modificarRecetaAPI(receta,id);
+      console.log(respuesta)
 
       if (respuesta.status === 200) {
         Swal.fire({
@@ -50,6 +52,7 @@ const FormularioReceta = ({titulo, subtitulo, editar}) => {
           text: `La receta '${receta.nombreReceta}' se modifico correctamente.`,
           icon: "success"
         });
+        navegacion('/administrador');
 
       } else {
         Swal.fire({
@@ -83,7 +86,7 @@ const FormularioReceta = ({titulo, subtitulo, editar}) => {
   return (
     <section className="flex-grow-1 bg-main-color">
       <div className="image-title-container">
-        <h1 className="title display-4">{titulo}</h1>
+        <h1 className="title display-3">{titulo}</h1>
       </div>
       <Container className="my-4">
         <h2 className="fs-1">
@@ -182,15 +185,12 @@ const FormularioReceta = ({titulo, subtitulo, editar}) => {
               >
                 <option value="">Seleccione la categoría</option>
                 <option value="Plato principal">Plato principal</option>
-                <option value="Postres y dulces">Postres y dulces</option>
-                <option value="Vegetarianas o veganas">
-                  Vegetarianas o veganas
-                </option>
-                <option value="guarniciones">Guarniciones</option>
-                <option value="Panaderia y reposteria">
-                  Panadería y repostería
-                </option>
-                <option value="Internacionales">Internacionales</option>
+                <option value="Postres">Postres</option>
+                <option value="Sopas y guisos">Sopas y guisos</option>
+                <option value="Ensaladas">Ensaladas</option>
+                <option value="Pastas">Pastas</option>
+                <option value="Aperitivos">Aperitivos</option>
+                <option value="Pan y bolleria">Pan y bolleria</option>
               </Form.Select>
               <Form.Text className="text-danger">
                 {errors.categoria?.message}
@@ -205,9 +205,9 @@ const FormularioReceta = ({titulo, subtitulo, editar}) => {
                 })}
               >
                 <option value="">Seleccione la dificultad</option>
-                <option value="Dificultad fácil">Fácil</option>
-                <option value="Dificultad intermedio">Intermedio</option>
-                <option value="Dificultad difícil">Difícil</option>
+                <option value="Fácil">Fácil</option>
+                <option value="Intermedio">Intermedio</option>
+                <option value="Difícil">Difícil</option>
               </Form.Select>
               <Form.Text className="text-danger">
                 {errors.dificultad?.message}
