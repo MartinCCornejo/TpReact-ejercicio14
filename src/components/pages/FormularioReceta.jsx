@@ -45,9 +45,18 @@ const FormularioReceta = ({titulo, subtitulo, editar}) => {
       const respuesta = await modificarRecetaAPI(producto,producto.id);
 
       if (respuesta.status === 200) {
-        
+        Swal.fire({
+          title: "Receta modificada!",
+          text: `La receta '${receta.nombreReceta}' se modifico correctamente.`,
+          icon: "success"
+        });
+
       } else {
-        
+        Swal.fire({
+          title: "Ocurrio un error!",
+          text: `La receta '${receta.nombreReceta}' no se pudo modificar correctamente, intente de nuevo en unos minutos.`,
+          icon: "error"
+        });
       }
 
     } else {
