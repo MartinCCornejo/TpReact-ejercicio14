@@ -19,7 +19,7 @@ function App() {
         <Route exact path="/administrador" element={<Administrador></Administrador>}></Route>
         <Route exact path="/administrador/agregar-receta" element={<FormularioReceta editar={false} titulo={'Agregar receta'} subtitulo={'Nueva receta'}></FormularioReceta>}></Route>
         <Route exact path="/administrador/editar-receta/:id" element={<FormularioReceta editar={true} titulo={'Editar receta'} subtitulo={'Verifique los datos'}></FormularioReceta>}></Route>
-        <Route exact path="/detalle-de-receta" element={<DetalleReceta></DetalleReceta>}></Route> 
+        <Route exact path="/detalle-de-receta/:id" element={<DetalleReceta></DetalleReceta>}></Route> 
         <Route path="*" element={<Error404></Error404>}></Route> 
       </Routes>
       <Footer></Footer>
