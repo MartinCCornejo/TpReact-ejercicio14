@@ -1,20 +1,20 @@
 import { Button } from "react-bootstrap";
 
-const ItemReceta = () => {
+const ItemReceta = ({receta}) => {
   return (
     <tr>
-      <td className="text-center">1</td>
-      <td>Tostada con espinaca</td>
-      <td className="text-center">
+      <td className="text-center overflow-hidden text-truncate">{receta.id}</td>
+      <td>{receta.nombreReceta}</td>
+      <td className="text-center overflow-hidden text-truncate">
         <img
-          src="https://images.pexels.com/photos/1351238/pexels-photo-1351238.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-          width={120}
+          src={receta.imagenURL}
+          width={110}
           alt="Imagen de la receta"
         />
       </td>
-      <td className="text-center">Merienda</td>
-      <td className="text-center">Dificultad facil</td>
-      <td className="text-center">
+      <td className="text-center overflow-hidden text-truncate">{receta.categoria}</td>
+      <td className="text-center overflow-hidden text-truncate">{receta.dificultad}</td>
+      <td className="text-center overflow-hidden text-truncate">
         <Button className="btn btn-warning">
           <i className="bi bi-pencil-square"></i>
         </Button>

@@ -19,3 +19,15 @@ export async function crearRecetaAPI (recetaNueva) {
         console.log(error);
     }
 }
+
+// Función para leer las recetas - GET 
+export async function leerRecetasAPI () {
+    try {
+        const respuesta = await fetch(URI_Receta);
+        console.log(respuesta);
+        return respuesta;
+        
+    } catch (error) {
+        console.log(error)
+    }
+}
