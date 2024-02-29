@@ -2,7 +2,7 @@ import { Col, Container, Row } from "react-bootstrap";
 
 const Banner = () => {
   return (
-    <section className="banner">
+    <section className="banner pt-5">
       <Container>
         <Row>
           <Col lg={7} className="">

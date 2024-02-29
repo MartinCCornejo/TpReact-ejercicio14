@@ -28,7 +28,7 @@ const CardReceta = ({receta}) => {
             {receta.descripcionBreve}
           </p>
         </Card.Body>
-        <Link to={"/detalle-de-receta"}>
+        <Link to={"/detalle-de-receta/"+receta.id}>
           <button className="btn-customized btn-100">Ver más</button>
         </Link>
       </Card>

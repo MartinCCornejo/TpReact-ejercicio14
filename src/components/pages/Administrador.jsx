@@ -30,7 +30,7 @@ const Administrador = () => {
   }
 
   return (
-    <section className="bg-main-color flex-grow-1">
+    <section className="bg-main-color flex-grow-1 mt-5">
     <Container className="my-5 ">
       <div className="d-flex justify-content-between align-items-center mb-3">
         <h1>
