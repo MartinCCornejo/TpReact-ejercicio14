@@ -12,21 +12,25 @@ const FormularioReceta = ({titulo, subtitulo, editar}) => {
   } = useForm();
 
   const onSubmit = async (receta) => {
-    const respuesta = await crearRecetaAPI(receta);
-
-    if (respuesta.status === 201) {
-      Swal.fire({
-        title: "Receta agregada!",
-        text: `La receta '${receta.nombreReceta}' se agrego correctamente.`,
-        icon: "success"
-      });
-      reset();
+    if (editar) {
+      
     } else {
-      Swal.fire({
-        title: "Ocurrio un error!",
-        text: `La receta '${receta.nombreReceta}' no se pudo agregar, intente de nuevo en unos minutos.`,
-        icon: "error"
-      });
+      const respuesta = await crearRecetaAPI(receta);
+  
+      if (respuesta.status === 201) {
+        Swal.fire({
+          title: "Receta agregada!",
+          text: `La receta '${receta.nombreReceta}' se agrego correctamente.`,
+          icon: "success"
+        });
+        reset();
+      } else {
+        Swal.fire({
+          title: "Ocurrio un error!",
+          text: `La receta '${receta.nombreReceta}' no se pudo agregar, intente de nuevo en unos minutos.`,
+          icon: "error"
+        });
+      }
     }
   };
 

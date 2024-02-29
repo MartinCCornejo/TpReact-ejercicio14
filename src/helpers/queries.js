@@ -42,3 +42,20 @@ export async function borrarRecetaAPI(id) {
         console.log(error);
     }
 }
+
+// Función para editar una receta - PUT 
+export async function modificarRecetaAPI (receta,id) {
+    try {
+      const respuesta = await fetch(`${URI_Receta}/${id}`, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(producto)
+      });
+      return respuesta;
+      
+    } catch (error) {
+      console.log(error);
+    }
+  }
