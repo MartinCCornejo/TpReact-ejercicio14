@@ -24,10 +24,36 @@ p, .textRoboto{
   color: #B8860B;
 }
 
+.navbar-toggler{
+  background: #fff;
+}
+
 .logo{
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
   color: #fff;
+  transition: text-shadow .3s;
+}
+.logo:hover{
+  color: #fff;
+  text-shadow: 3px 3px 15px rgba(0,0,0,0.3);
+}
+
+.logo:focus{
+  color: #fff
+}
+
+.navbar-customized{
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  padding: 20px 0;
+  transition: padding .3s, box-shadow .3s;
+  background: #B8860B;
+}
+.navbar-customized.activeNavbar{
+  padding: 14px 0;
+  box-shadow: 3px 3px 20px rgba(0,0,0,0.4);
 }
 
 .navbar .nav-link{
@@ -46,10 +72,11 @@ p, .textRoboto{
 
 
 .banner{
-  background: linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)) 
+  background: linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.7)) 
   ,url(./assets/img-banner.jpg) no-repeat center center;
   background-size: cover;
-  min-height: 80vh;
+  height: 100vh;
+  max-height: 60rem;
   display: flex;
   align-items: center;
 }
@@ -67,7 +94,6 @@ p, .textRoboto{
   height: 220px;
   object-fit: cover;
   width: 100%;
-  box-shadow: 5px 5px 20px red;
 }
 
 .card-img-container{
@@ -104,8 +130,8 @@ p, .textRoboto{
   background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.7))
   ,url(./assets/img-title.jpg) no-repeat center center;
   background-size: cover;
-  height: 40vh;
-  max-height: 25rem;
+  height: 50vh;
+  max-height: 27rem;
   display: flex;
   justify-content: center;
   align-items: end;

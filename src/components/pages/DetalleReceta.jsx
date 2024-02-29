@@ -19,8 +19,8 @@ const DetalleReceta = () => {
   };
 
   return (
-    <section className="flex-grow-1 bg-main-color">
-      <Container className="my-4">
+    <section className="flex-grow-1 bg-main-color mt-5">
+      <Container className="my-4 mt-5">
         <h1 className="fs-1">
           <span className="display-4 fw-semibold darkGolden-color">D</span>
           etalle de la receta
