@@ -6,7 +6,7 @@ import { obtenerRecetaAPI } from "../../helpers/queries";
 
 const DetalleReceta = () => {
   const { id } = useParams();
-  const [receta,setReceta] = useState({});
+  const [receta, setReceta] = useState({});
 
   useEffect(() => {
     cargarDatosReceta();
@@ -15,7 +15,7 @@ const DetalleReceta = () => {
   const cargarDatosReceta = async () => {
     const respuesta = await obtenerRecetaAPI(id);
     const datos = await respuesta.json();
-    setReceta(datos)
+    setReceta(datos);
   };
 
   return (
@@ -38,13 +38,15 @@ const DetalleReceta = () => {
             <h2 className="fw-semibold text-uppercase fs-1">
               {receta.nombreReceta}
             </h2>
-            <span className="textPoppins fw-bold darkGolden-color fs-5 me-4">
-              Dificultad {receta.dificultad}
-            </span>
-            <span className="textPoppins fw-bold darkGolden-color fs-5">
-              <FaUtensils className="me-1" />
-              {receta.categoria}
-            </span>
+            <div className="row justify-content-center align-items-center">
+              <span className="col-md-6 textPoppins fw-bold darkGolden-color fs-5">
+                Dificultad {receta.dificultad}
+              </span>
+              <span className="col-md-6 textPoppins fw-bold darkGolden-color fs-5">
+                <FaUtensils className="me-1" />
+                {receta.categoria}
+              </span>
+            </div>
             <hr className="mt-2 mb-3" />
             <p className="text-gray text-start">
               {receta.descripcionDetallada}
@@ -57,9 +59,7 @@ const DetalleReceta = () => {
             ngredientes
           </h3>
           <hr className="mt-0" />
-          <p className="text-gray">
-            {receta.ingredientes}
-          </p>
+          <p className="text-gray">{receta.ingredientes}</p>
         </div>
         <div className="mt-4 mb-5">
           <h3 className="fs-2">
@@ -67,9 +67,7 @@ const DetalleReceta = () => {
             reparación
           </h3>
           <hr className="mt-0" />
-          <p className="text-gray">
-            {receta.preparacion}
-          </p>
+          <p className="text-gray">{receta.preparacion}</p>
         </div>
       </Container>
     </section>
