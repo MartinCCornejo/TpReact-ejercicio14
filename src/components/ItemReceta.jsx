@@ -2,8 +2,7 @@ import { Button } from "react-bootstrap";
 import { borrarRecetaAPI, leerRecetasAPI } from "../helpers/queries";
 import Swal from "sweetalert2";
 
-const ItemReceta = ({receta, setRecetas}) => {
-
+const ItemReceta = ({ receta, setRecetas }) => {
   const borrarReceta = () => {
     Swal.fire({
       title: "Estas seguro de borrar esta receta?",
@@ -23,10 +22,16 @@ const ItemReceta = ({receta, setRecetas}) => {
             text: `La receta '${receta.nombreReceta}' fue eliminada correctamente`,
             icon: "success",
           });
-          if (respuesta.status === 200) {
-            const respuesta = await leerRecetasAPI();
-            const datos = await respuesta.json();
-            setRecetas(datos);
+          const respuestaActualizada = await leerRecetasAPI();
+          if (respuestaActualizada.status === 200) {
+            const datosActualizados = await respuestaActualizada.json();
+            setRecetas(datosActualizados);
+          } else {
+            Swal.fire({
+              title: "Ocurrio un error",
+              text: "No se pudo listar los productos",
+              icon: "error",
+            });
           }
         } else {
           Swal.fire({
@@ -40,18 +45,18 @@ const ItemReceta = ({receta, setRecetas}) => {
   };
 
   return (
-    <tr>
+    <tr className="textPoppins">
       <td className="text-center overflow-hidden text-truncate">{receta.id}</td>
       <td>{receta.nombreReceta}</td>
       <td className="text-center overflow-hidden text-truncate">
-        <img
-          src={receta.imagenURL}
-          width={110}
-          alt="Imagen de la receta"
-        />
+        <img src={receta.imagenURL} width={110} alt="Imagen de la receta" />
       </td>
-      <td className="text-center overflow-hidden text-truncate">{receta.categoria}</td>
-      <td className="text-center overflow-hidden text-truncate">{receta.dificultad}</td>
+      <td className="text-center overflow-hidden text-truncate">
+        {receta.categoria}
+      </td>
+      <td className="text-center overflow-hidden text-truncate">
+        {receta.dificultad}
+      </td>
       <td className="text-center overflow-hidden text-truncate">
         <Button className="btn btn-warning">
           <i className="bi bi-pencil-square"></i>
