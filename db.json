@@ -32,6 +32,50 @@
       "dificultad": "intermedio",
       "ingredientes": "asdasdsaddddddddddddddddddddddddd",
       "preparacion": "asdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+    },
+    {
+      "id": "9be5",
+      "nombreReceta": "asdsdasdasdasdasd",
+      "imagenURL": "https://sldsadlasdsd.png",
+      "descripcionBreve": "Un exquisito licuado de frutilla",
+      "descripcionDetallada": "asdasdsadasdsadsaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "categoria": "postresYDulces",
+      "dificultad": "intermedio",
+      "ingredientes": "asdasdsaddddddddddddddddddddddddd",
+      "preparacion": "asdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+    },
+    {
+      "id": "598a",
+      "nombreReceta": "asdsdasdasdasdasd",
+      "imagenURL": "https://sldsadlasdsd.png",
+      "descripcionBreve": "Un exquisito licuado de frutilla",
+      "descripcionDetallada": "asdasdsadasdsadsaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "categoria": "postresYDulces",
+      "dificultad": "intermedio",
+      "ingredientes": "asdasdsaddddddddddddddddddddddddd",
+      "preparacion": "asdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+    },
+    {
+      "id": "d978",
+      "nombreReceta": "asdasdasddddddd",
+      "imagenURL": "http://asddddddasdasdsad.jpg",
+      "descripcionBreve": "asdsadsadsadasd",
+      "descripcionDetallada": "sadasdasdasddddddddddddddddddddddddddddddddddddddddddddddddd",
+      "categoria": "postresYDulces",
+      "dificultad": "intermedio",
+      "ingredientes": "asdddddddddddddddddddddddddddddddddddddddddddddd",
+      "preparacion": "asddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+    },
+    {
+      "id": "10fa",
+      "nombreReceta": "sadddddddddddddddddddd",
+      "imagenURL": "http://asddddddasdasdsad.jpg",
+      "descripcionBreve": "asdsadsadsadasd",
+      "descripcionDetallada": "sadasdasdasddddddddddddddddddddddddddddddddddddddddddddddddd",
+      "categoria": "guarniciones",
+      "dificultad": "intermedio",
+      "ingredientes": "asdddddddddddddddddddddddddddddddddddddddddddddd",
+      "preparacion": "sdaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaasddddddddddddddddddd"
     }
   ]
 }

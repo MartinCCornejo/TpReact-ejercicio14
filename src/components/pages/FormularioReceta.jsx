@@ -1,18 +1,33 @@
 import { Container, Form } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { crearRecetaAPI } from "../../helpers/queries";
+import Swal from "sweetalert2";
 
 const FormularioReceta = () => {
   const {
     register,
     handleSubmit,
     formState: { errors },
+    reset
   } = useForm();
 
-  const onSubmit = async (producto) => {
-    console.log(producto);
-    const respuesta = await crearRecetaAPI(producto);
-    console.log(respuesta);
+  const onSubmit = async (receta) => {
+    const respuesta = await crearRecetaAPI(receta);
+
+    if (respuesta.status === 201) {
+      Swal.fire({
+        title: "Receta agregada!",
+        text: `La receta '${receta.nombreReceta}' se agrego correctamente.`,
+        icon: "success"
+      });
+      reset();
+    } else {
+      Swal.fire({
+        title: "Ocurrio un error!",
+        text: `La receta '${receta.nombreReceta}' no se pudo agregar, intente de nuevo en unos minutos.`,
+        icon: "error"
+      });
+    }
   };
 
 
@@ -193,7 +208,7 @@ const FormularioReceta = () => {
                 {errors.preparacion?.message}
             </Form.Text>
           </Form.Group>
-          <button className="btn-customized mt-2 fs-5" type="submit">
+          <button className="btn-customized mt-2" type="submit">
             Guardar
           </button>
         </Form>
