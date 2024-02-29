@@ -1,6 +1,6 @@
 import { Container, Form } from "react-bootstrap";
 import { useForm } from "react-hook-form";
-import { crearReceta } from "../../helpers/queries";
+import { crearRecetaAPI } from "../../helpers/queries";
 
 const FormularioReceta = () => {
   const {
@@ -9,11 +9,12 @@ const FormularioReceta = () => {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (producto) => {
+  const onSubmit = async (producto) => {
     console.log(producto);
+    const respuesta = await crearRecetaAPI(producto);
+    console.log(respuesta);
   };
 
-  crearReceta();
 
   return (
     <section className="flex-grow-1 bg-main-color">

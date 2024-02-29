@@ -3,7 +3,7 @@ const URI_Receta = import.meta.env.VITE_API_RECETA;
 // console.log(URI_Receta);
 
 // Funcion para agregar una receta - POST 
-export async function crearReceta (recetaNueva) {
+export async function crearRecetaAPI (recetaNueva) {
     try {
         const respuesta = await fetch(URI_Receta, {
             method: "POST",

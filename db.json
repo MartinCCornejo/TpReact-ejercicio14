@@ -12,28 +12,26 @@
       "preparacion": "Colocar por encima de una tostada queso cremoso, y luego espinaca"
     },
     {
-      "id": "a59a"
+      "id": "3159",
+      "nombreReceta": "asdsdasdasdasdasd",
+      "imagenURL": "https://sldsadlasdsd.png",
+      "descripcionBreve": "Un exquisito licuado de frutilla",
+      "descripcionDetallada": "asdasdsadasdsadsaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "categoria": "postresYDulces",
+      "dificultad": "intermedio",
+      "ingredientes": "asdasdsaddddddddddddddddddddddddd",
+      "preparacion": "asdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
     },
     {
-      "id": "56de"
-    },
-    {
-      "id": "0bca"
-    },
-    {
-      "id": "5901"
-    },
-    {
-      "id": "925c"
-    },
-    {
-      "id": "3f97"
-    },
-    {
-      "id": "688d"
-    },
-    {
-      "id": "732e"
+      "id": "8088",
+      "nombreReceta": "asdsdasdasdasdasd",
+      "imagenURL": "https://sldsadlasdsd.png",
+      "descripcionBreve": "Un exquisito licuado de frutilla",
+      "descripcionDetallada": "asdasdsadasdsadsaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "categoria": "postresYDulces",
+      "dificultad": "intermedio",
+      "ingredientes": "asdasdsaddddddddddddddddddddddddd",
+      "preparacion": "asdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
     }
   ]
 }
