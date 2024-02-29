@@ -12,7 +12,6 @@ export async function crearRecetaAPI (recetaNueva) {
             },
             body: JSON.stringify(recetaNueva)
         });
-        console.log(respuesta);
         return respuesta;
         
     } catch (error) {
@@ -24,10 +23,22 @@ export async function crearRecetaAPI (recetaNueva) {
 export async function leerRecetasAPI () {
     try {
         const respuesta = await fetch(URI_Receta);
-        console.log(respuesta);
         return respuesta;
         
     } catch (error) {
         console.log(error)
+    }
+}
+
+// Función para eliminar una receta - DELETE 
+export async function borrarRecetaAPI(id) {
+    try {
+        const respuesta = await fetch(`${URI_Receta}/${id}`, {
+            method: "DELETE"
+        });
+        return respuesta;
+
+    } catch (error) {
+        console.log(error);
     }
 }

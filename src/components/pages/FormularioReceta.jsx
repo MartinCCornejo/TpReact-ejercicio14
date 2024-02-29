@@ -72,7 +72,7 @@ const FormularioReceta = () => {
               {...register("imagenURL", {
                 required: "Este campo es obligatorio",
                 pattern: {
-                  value: /^(http|https):\/\/\S+\.(jpeg|jpg|gif|png|bmp)$/i,
+                  value: /^(http|https):\/\/\S+\.(jpeg|jpg|gif|png|bmp|webp)$/i,
                   message: "Ingrese una URL válida",
                 },
               })}
@@ -133,16 +133,16 @@ const FormularioReceta = () => {
                 })}
               >
                 <option value="">Seleccione la categoría</option>
-                <option value="platoPrincipal">Plato principal</option>
-                <option value="postresYDulces">Postres y dulces</option>
-                <option value="vegetarianasOVeganas">
+                <option value="Plato principal">Plato principal</option>
+                <option value="Postres y dulces">Postres y dulces</option>
+                <option value="Vegetarianas o veganas">
                   Vegetarianas o veganas
                 </option>
                 <option value="guarniciones">Guarniciones</option>
-                <option value="panaderiaYReposteria">
+                <option value="Panaderia y reposteria">
                   Panadería y repostería
                 </option>
-                <option value="internacionales">Internacionales</option>
+                <option value="Internacionales">Internacionales</option>
               </Form.Select>
               <Form.Text className="text-danger">
                 {errors.categoria?.message}
@@ -157,9 +157,9 @@ const FormularioReceta = () => {
                 })}
               >
                 <option value="">Seleccione la dificultad</option>
-                <option value="facil">Fácil</option>
-                <option value="intermedio">Intermedio</option>
-                <option value="dificil">Difícil</option>
+                <option value="Dificultad fácil">Fácil</option>
+                <option value="Dificultad intermedio">Intermedio</option>
+                <option value="Dificultad difícil">Difícil</option>
               </Form.Select>
               <Form.Text className="text-danger">
                 {errors.dificultad?.message}

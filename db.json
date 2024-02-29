@@ -1,81 +1,15 @@
 {
   "recetas": [
     {
-      "id": "123",
-      "nombreReceta": "Tostadas de espinaca y queso",
-      "imagenURL": "https://images.pexels.com/photos/1351238/pexels-photo-1351238.jpeg",
-      "descripcionBreve": "Una deliciosa tostada con queso y espinaca",
-      "descripcionDetallada": "Una deliciosa tostada con queso y espinaca",
-      "categoria": "Merienda",
-      "dificultad": "Dificultad Fácil",
-      "ingredientes": "Lista de ingredientes",
-      "preparacion": "Colocar por encima de una tostada queso cremoso, y luego espinaca"
-    },
-    {
-      "id": "3159",
-      "nombreReceta": "asdsdasdasdasdasd",
-      "imagenURL": "https://sldsadlasdsd.png",
-      "descripcionBreve": "Un exquisito licuado de frutilla",
-      "descripcionDetallada": "asdasdsadasdsadsaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-      "categoria": "postresYDulces",
-      "dificultad": "intermedio",
-      "ingredientes": "asdasdsaddddddddddddddddddddddddd",
-      "preparacion": "asdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
-    },
-    {
-      "id": "8088",
-      "nombreReceta": "asdsdasdasdasdasd",
-      "imagenURL": "https://sldsadlasdsd.png",
-      "descripcionBreve": "Un exquisito licuado de frutilla",
-      "descripcionDetallada": "asdasdsadasdsadsaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-      "categoria": "postresYDulces",
-      "dificultad": "intermedio",
-      "ingredientes": "asdasdsaddddddddddddddddddddddddd",
-      "preparacion": "asdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
-    },
-    {
-      "id": "9be5",
-      "nombreReceta": "asdsdasdasdasdasd",
-      "imagenURL": "https://sldsadlasdsd.png",
-      "descripcionBreve": "Un exquisito licuado de frutilla",
-      "descripcionDetallada": "asdasdsadasdsadsaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-      "categoria": "postresYDulces",
-      "dificultad": "intermedio",
-      "ingredientes": "asdasdsaddddddddddddddddddddddddd",
-      "preparacion": "asdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
-    },
-    {
-      "id": "598a",
-      "nombreReceta": "asdsdasdasdasdasd",
-      "imagenURL": "https://sldsadlasdsd.png",
-      "descripcionBreve": "Un exquisito licuado de frutilla",
-      "descripcionDetallada": "asdasdsadasdsadsaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-      "categoria": "postresYDulces",
-      "dificultad": "intermedio",
-      "ingredientes": "asdasdsaddddddddddddddddddddddddd",
-      "preparacion": "asdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
-    },
-    {
-      "id": "d978",
-      "nombreReceta": "asdasdasddddddd",
-      "imagenURL": "http://asddddddasdasdsad.jpg",
-      "descripcionBreve": "asdsadsadsadasd",
-      "descripcionDetallada": "sadasdasdasddddddddddddddddddddddddddddddddddddddddddddddddd",
-      "categoria": "postresYDulces",
-      "dificultad": "intermedio",
-      "ingredientes": "asdddddddddddddddddddddddddddddddddddddddddddddd",
-      "preparacion": "asddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
-    },
-    {
-      "id": "10fa",
-      "nombreReceta": "sadddddddddddddddddddd",
-      "imagenURL": "http://asddddddasdasdsad.jpg",
-      "descripcionBreve": "asdsadsadsadasd",
-      "descripcionDetallada": "sadasdasdasddddddddddddddddddddddddddddddddddddddddddddddddd",
-      "categoria": "guarniciones",
-      "dificultad": "intermedio",
-      "ingredientes": "asdddddddddddddddddddddddddddddddddddddddddddddd",
-      "preparacion": "sdaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaasddddddddddddddddddd"
+      "id": "f6b3",
+      "nombreReceta": "Bizcocho de arroz",
+      "imagenURL": "https://cdn0.recetasgratis.net/es/posts/8/0/2/bizcocho_de_arroz_77208_600.webp",
+      "descripcionBreve": "Si aún no has encontrado una receta de pastel esponjoso y ",
+      "descripcionDetallada": "Si aún no has encontrado una receta de pastel esponjoso y sin gluten para adultos, es hora de conocer esta receta de bizcocho de arroz crudo sin harina. Así es, esta elaboración se prepara sin trigo ni ningún otro tipo de harina o salvado: solo con arroz crudo, huevo, azúcar, aceite y levadura. Además, para proporcionar más sabor, también puedes añadir coco, sin embargo, este es un ingrediente opcional. También debes saber que este es un bizcocho sin lactosa, apto para quienes no pueden utilizar leche, yogur o mantequilla.",
+      "categoria": "Panaderia y reposteria",
+      "dificultad": "Difultad facil",
+      "ingredientes": "1 taza de arroz crudo (taza de 200 ml)  1 taza de aceite (taza de 200 ml)  1 taza de azúcar (taza de 200 ml)  4 huevos medianos  1 cucharada sopera de levadura química  ½ taza de coco rallado (opcional)",
+      "preparacion": "Remoja el arroz en agua fría durante 3-4 horas. Esto será necesario para que quede suave y sea más fácil batir.  Truco: no hay una cantidad adecuada de agua, debería ser suficiente para cubrir todo el arroz.  Receta de Bizcocho de arroz - Paso 1 2 Pasado este tiempo, licúa en una batidora el resto de los ingredientes: el aceite, el azúcar y los huevos hasta que quede espumoso. Agrega el arroz crudo escurrido y bate durante 5 minutos.  Truco: precalienta el horno a 180 ºC.  Receta de Bizcocho de arroz - Paso 2 3 Añade la levadura y, si quieres, el coco rallado también. Bate rápidamente solo para mezclar, también puedes remover con una cuchara o espátula.  Receta de Bizcocho de arroz - Paso 3 4 Coloca la masa para este bizcocho sin trigo en un molde untado con aceite, preferiblemente con un agujero en el medio, y hornea durante 30-40 minutos. Haz la prueba del palillo para comprobar la consistencia del bizcocho.  Truco: utiliza un molde redondo de 22-24 cm de diámetro.  Receta de Bizcocho de arroz - Paso 4 5 Pa"
     }
   ]
 }
