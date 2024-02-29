@@ -31,3 +31,15 @@ export async function leerRecetasAPI () {
         console.log(error)
     }
 }
+
+// Función para eliminar una receta - DELETE 
+export async function borrarRecetaAPI(id) {
+    try {
+      const respuesta = await fetch(`${URI_Receta}/${id}`, {
+        method: "DELETE"
+      });
+      return respuesta;
+    } catch (error) {
+      console.log(error);
+    }
+}
