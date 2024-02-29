@@ -13,7 +13,7 @@ const Administrador = () => {
     obtenerRecetas();
   },[])
   
-  async function obtenerRecetas () {
+ async function obtenerRecetas () {
     const respuesta = await leerRecetasAPI();
   
     if (respuesta.status === 200) {
