@@ -34,7 +34,7 @@ const Recetas = () => {
         <hr className="darkGolden-color"/>
         <Row>
             {
-              recetas.map((receta)=> <CardReceta key={receta.id} receta={receta}></CardReceta>)
+              recetas.map((receta)=> <CardReceta key={receta.id} receta={receta} setRecetas={setRecetas}></CardReceta>)
             }
         </Row>
       </Container>
