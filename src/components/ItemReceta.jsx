@@ -59,7 +59,7 @@ const ItemReceta = ({ receta, setRecetas }) => {
         {receta.dificultad}
       </td>
       <td className="text-center overflow-hidden text-truncate">
-        <Link className="btn btn-warning" to={"/administrador/editar-receta"}>
+        <Link className="btn btn-warning" to={"/administrador/editar-receta/"+receta.id}>
           <i className="bi bi-pencil-square"></i>
         </Link>
         <Button variant="danger" className="ms-2" onClick={borrarReceta}>

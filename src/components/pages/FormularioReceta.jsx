@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { crearRecetaAPI } from "../../helpers/queries";
 import Swal from "sweetalert2";
 
-const FormularioReceta = () => {
+const FormularioReceta = ({titulo, subtitulo, editar}) => {
   const {
     register,
     handleSubmit,
@@ -34,12 +34,11 @@ const FormularioReceta = () => {
   return (
     <section className="flex-grow-1 bg-main-color">
       <div className="image-title-container">
-        <h1 className="title display-4">Agregar Receta</h1>
+        <h1 className="title display-4">{titulo}</h1>
       </div>
       <Container className="my-4">
         <h2 className="fs-1">
-          <span className="display-4 fw-semibold darkGolden-color">N</span>ueva
-          receta
+          {subtitulo}
         </h2>
         <hr />
         <Form className="mb-5" onSubmit={handleSubmit(onSubmit)}>
