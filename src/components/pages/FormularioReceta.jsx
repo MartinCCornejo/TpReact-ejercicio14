@@ -1,5 +1,6 @@
 import { Container, Form } from "react-bootstrap";
 import { useForm } from "react-hook-form";
+import { crearReceta } from "../../helpers/queries";
 
 const FormularioReceta = () => {
   const {
@@ -11,6 +12,8 @@ const FormularioReceta = () => {
   const onSubmit = (producto) => {
     console.log(producto);
   };
+
+  crearReceta();
 
   return (
     <section className="flex-grow-1 bg-main-color">
