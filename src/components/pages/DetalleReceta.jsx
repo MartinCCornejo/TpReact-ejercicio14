@@ -38,7 +38,7 @@ const DetalleReceta = () => {
             <h2 className="fw-semibold text-uppercase fs-1">
               {receta.nombreReceta}
             </h2>
-            <div className="row justify-content-center align-items-center">
+            <div className="row">
               <span className="col-md-6 textPoppins fw-bold darkGolden-color fs-5">
                 Dificultad {receta.dificultad}
               </span>
